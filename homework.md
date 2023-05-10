@@ -93,7 +93,7 @@ parseInt("09") //9
 5 && 2 //2
 2 && 5 //5
 5 || 0 //5
-0 || 5 //0
+0 || 5 //5
 [3]+[3]-[10] //23 porque por precedencia primero hace la concatenacion de 3 y 3 y despues convierte eso a numero y le resta 10
 3>2>1 //false porque primero hace 3>2 da true y despues hace convierte true a numero que sería 1 y compara 1>1 y da false
 [] == ![] //true porque por coerción [] es igual a "", ![] es igual a false, luego se convierte "" a 0 y false tambien a 0 entonces da true
@@ -138,7 +138,7 @@ function getFood(food) {
 
 getFood(false);
 //undefined
-//porque por hoisting la variable var se inicializa dentro del contexto de ejecucion de la funcion pero no toma ningun valor al ser false la condicion del if. Por lo tanto se retorna undefined localmente dentro de la funcion.
+//porque por hoisting la variable var se declara dentro del contexto de ejecucion de la funcion pero no toma ningun valor al ser false la condicion del if. Por lo tanto se retorna undefined localmente dentro de la funcion.
 //En realidad por consola no sale nada porque no hay un console.log() pero el getFood(false) devuelve undefined
 ```
 
